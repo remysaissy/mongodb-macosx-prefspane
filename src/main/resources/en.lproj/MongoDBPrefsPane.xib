@@ -69,7 +69,7 @@
 							<string key="NSFrame">{{66, 172}, {56, 66}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="216137139"/>
+							<reference key="NSNextKeyView" ref="259463785"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -79,6 +79,39 @@
 								<object class="NSCustomResource" key="NSContents">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">instance_stopped</string>
+								</object>
+								<string key="NSCellIdentifier">_NS:9</string>
+								<int key="NSAlign">0</int>
+								<int key="NSScale">0</int>
+								<int key="NSStyle">0</int>
+								<bool key="NSAnimates">NO</bool>
+							</object>
+							<bool key="NSEditable">YES</bool>
+						</object>
+						<object class="NSImageView" id="259463785">
+							<reference key="NSNextResponder" ref="1037298196"/>
+							<int key="NSvFlags">-2147483380</int>
+							<set class="NSMutableSet" key="NSDragTypes">
+								<string>Apple PDF pasteboard type</string>
+								<string>Apple PICT pasteboard type</string>
+								<string>Apple PNG pasteboard type</string>
+								<string>NSFilenamesPboardType</string>
+								<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
+								<string>NeXT TIFF v4.0 pasteboard type</string>
+							</set>
+							<string key="NSFrame">{{66, 172}, {56, 66}}</string>
+							<reference key="NSSuperview" ref="1037298196"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="216137139"/>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
+							<string key="NSReuseIdentifierKey">_NS:9</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSImageCell" key="NSCell" id="114346368">
+								<int key="NSCellFlags">130560</int>
+								<int key="NSCellFlags2">33554432</int>
+								<object class="NSCustomResource" key="NSContents">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">instance_started</string>
 								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<int key="NSAlign">0</int>
@@ -376,14 +409,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">instanceStatusImageView</string>
-						<reference key="source" ref="294453543"/>
-						<reference key="destination" ref="1016411497"/>
-					</object>
-					<int key="connectionID">126</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">instanceStatusTextField</string>
 						<reference key="source" ref="294453543"/>
 						<reference key="destination" ref="281245634"/>
@@ -415,20 +440,36 @@
 					<int key="connectionID">130</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">instanceStatusStoppedImageView</string>
+						<reference key="source" ref="294453543"/>
+						<reference key="destination" ref="1016411497"/>
+					</object>
+					<int key="connectionID">140</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">instanceStatusStartedImageView</string>
+						<reference key="source" ref="294453543"/>
+						<reference key="destination" ref="259463785"/>
+					</object>
+					<int key="connectionID">141</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">onStartStopButtonPushed:</string>
-						<reference key="source" ref="308860122"/>
+						<reference key="source" ref="294453543"/>
 						<reference key="destination" ref="842711905"/>
 					</object>
-					<int key="connectionID">131</int>
+					<int key="connectionID">142</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">onAutomaticStartButtonPushed:</string>
-						<reference key="source" ref="308860122"/>
+						<reference key="source" ref="294453543"/>
 						<reference key="destination" ref="834327450"/>
 					</object>
-					<int key="connectionID">132</int>
+					<int key="connectionID">143</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -474,6 +515,7 @@
 							<reference ref="1016411497"/>
 							<reference ref="842711905"/>
 							<reference ref="678593307"/>
+							<reference ref="259463785"/>
 						</array>
 						<reference key="parent" ref="660800786"/>
 					</object>
@@ -490,7 +532,7 @@
 							<reference ref="297836004"/>
 						</array>
 						<reference key="parent" ref="1037298196"/>
-						<string key="objectName">Instance status image</string>
+						<string key="objectName">Instance status stopped image</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">102</int>
@@ -611,6 +653,20 @@
 						<reference key="object" ref="545490034"/>
 						<reference key="parent" ref="1045725750"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">138</int>
+						<reference key="object" ref="259463785"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="114346368"/>
+						</array>
+						<reference key="parent" ref="1037298196"/>
+						<string key="objectName">Instance status started image</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">139</int>
+						<reference key="object" ref="114346368"/>
+						<reference key="parent" ref="259463785"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -642,13 +698,15 @@
 				<string key="133.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="134.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="135.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="138.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="139.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">135</int>
+			<int key="maxID">143</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -673,7 +731,8 @@
 						<string key="instanceAutomaticStartButton">NSButton</string>
 						<string key="instanceStartStopButton">NSButton</string>
 						<string key="instanceStatusDescriptionTextField">NSTextField</string>
-						<string key="instanceStatusImageView">NSImageView</string>
+						<string key="instanceStatusStartedImageView">NSImageView</string>
+						<string key="instanceStatusStoppedImageView">NSImageView</string>
 						<string key="instanceStatusTextField">NSTextField</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -689,8 +748,12 @@
 							<string key="name">instanceStatusDescriptionTextField</string>
 							<string key="candidateClassName">NSTextField</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="instanceStatusImageView">
-							<string key="name">instanceStatusImageView</string>
+						<object class="IBToOneOutletInfo" key="instanceStatusStartedImageView">
+							<string key="name">instanceStatusStartedImageView</string>
+							<string key="candidateClassName">NSImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="instanceStatusStoppedImageView">
+							<string key="name">instanceStatusStoppedImageView</string>
 							<string key="candidateClassName">NSImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="instanceStatusTextField">
@@ -743,6 +806,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NSSwitch">{15, 15}</string>
+			<string key="instance_started">{47, 49}</string>
 			<string key="instance_stopped">{47, 49}</string>
 			<string key="logo-mongodb">{190, 63}</string>
 		</dictionary>

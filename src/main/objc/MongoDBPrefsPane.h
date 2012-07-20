@@ -11,7 +11,8 @@
 @interface MongoDBPrefsPane : NSPreferencePane
 
 //The wheel which visually indicates if the server is started of not.
-@property (retain, nonatomic) IBOutlet NSImageView  *instanceStatusImageView;
+@property (retain, nonatomic) IBOutlet NSImageView  *instanceStatusStoppedImageView;
+@property (retain, nonatomic) IBOutlet NSImageView  *instanceStatusStartedImageView;
 
 // The description text of the server status.
 @property (retain, nonatomic) IBOutlet NSTextField  *instanceStatusDescriptionTextField;
@@ -26,7 +27,7 @@
 @property (retain, nonatomic) IBOutlet NSButton     *instanceAutomaticStartButton;
 
 //Performs first time checks to configure the UI elements.
-- (void)mainViewDidLoad;
+- (void) didSelect;
 
 //Starts or stops the MongoDB server and updates the relevant textfields and images.
 - (IBAction)onStartStopButtonPushed:(id)sender;
