@@ -8,12 +8,13 @@
 
 #import "MongoDBPrefsPane.h"
 
+#include <sys/sysctl.h>
 #include <assert.h>
 #include <errno.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <sys/sysctl.h>
+#include <signal.h>
 
 typedef struct kinfo_proc kinfo_proc;
 
@@ -121,6 +122,9 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 //Check if their is a running process (and not only application) named processName.
 - (BOOL)_isRunningProcessNamed:(NSString *)processName;
 
+//Returns the list of pids running a process named processName.
+- (NSArray *)_pidListForProcessesNamed:(NSString *)processName;
+
 //Get informations about a running process.
 - (NSDictionary *)_infoForPID:(pid_t)pid;
 
@@ -132,6 +136,12 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 
 //Configure the UI with the process stopped.
 - (void)_setProcessAsStopped;
+
+//Blocking call to start the process and returns YES in case of success.
+- (BOOL)_startProcess;
+
+//Blocking call to stop the process and returns YES in case of success.
+- (BOOL)_stopProcess;
 
 @end
 
@@ -157,16 +167,19 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 
 - (IBAction)onStartStopButtonPushed:(id)sender
 {
-    NSLog(@"%@ pressed.", NSStringFromSelector(_cmd));    
-    if (self._isStarted == YES)
-        [self _setProcessAsStopped];
-    else 
-        [self _setProcessAsStarted];
+    if (self._isStarted == YES) {
+        if ([self _stopProcess] == YES)
+            [self _setProcessAsStopped];        
+    } else {
+        if ([self _startProcess] == YES) {
+            NSLog(@"Process is running!");
+            [self _setProcessAsStarted];
+        }
+    }
 }
 
 - (IBAction)onAutomaticStartButtonPushed:(id)sender
 {
-    NSLog(@"%@ pressed.", NSStringFromSelector(_cmd));
 }
 
 #pragma mark - Private methods.
@@ -199,12 +212,31 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
             fullName = [NSString stringWithFormat:@"%s",proc->kp_proc.p_comm];
         if ([processName isEqualToString:fullName] == YES) {
             isRunning = YES;
-//        [NSString stringWithFormat:@"%d",proc->kp_proc.p_pid],@"pid",            
             break;
         }
     }
     free(processList);  
     return isRunning;
+}
+
+- (NSArray *)_pidListForProcessesNamed:(NSString *)processName
+{
+    NSMutableArray *pidList = [NSMutableArray array];
+    kinfo_proc *processList = NULL;
+    size_t processCount = 0;
+    GetBSDProcessList(&processList, &processCount);
+    assert(processList != NULL);
+    for (int k = 0; k < processCount; k++) {
+        kinfo_proc *proc = NULL;
+        proc = &processList[k];
+        NSString *fullName = [[self _infoForPID:proc->kp_proc.p_pid] objectForKey:(id)kCFBundleNameKey];
+        if (fullName == nil) 
+            fullName = [NSString stringWithFormat:@"%s",proc->kp_proc.p_comm];
+        if ([processName isEqualToString:fullName] == YES)
+            [pidList addObject:[NSNumber numberWithInt:proc->kp_proc.p_pid]];
+    }
+    free(processList);  
+    return pidList;
 }
 
 - (NSDictionary *)_infoForPID:(pid_t)pid 
@@ -239,6 +271,39 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
     [self.instanceStatusStartedImageView setHidden:YES];
     [self.instanceStatusStoppedImageView setHidden:NO];
     self._isStarted = NO;    
+}
+
+- (BOOL)_startProcess
+{
+    NSString *processPath = [self _findBinaryNamed:@"mongod"];
+    if (processPath == nil)
+        return NO;
+    NSMutableArray *configPathArray = [[processPath pathComponents] mutableCopy];
+    [configPathArray replaceObjectAtIndex:[configPathArray count] - 2  withObject:@"etc"];
+    [configPathArray replaceObjectAtIndex:[configPathArray count] - 1  withObject:@"mongod.conf"];
+    NSString *configPath = [NSString pathWithComponents:configPathArray];
+    NSString *logPath = [@"~/Library/Logs/mongod.log" stringByExpandingTildeInPath];
+    NSTask *task = [NSTask launchedTaskWithLaunchPath:processPath arguments:[NSArray arrayWithObjects:@"run", @"--fork", @"--logpath", logPath, @"--config", configPath, nil]];
+    [task waitUntilExit];
+    BOOL isStarted = [self _isRunningProcessNamed:@"mongod"];
+    if (isStarted == YES)
+        NSLog(@"[STARTED]%@ run --fork --logpath %@ --config %@", processPath, logPath, configPath);
+    else
+        NSLog(@"[FAILED]%@ run --fork --logpath %@ --config %@", processPath, logPath, configPath);
+    return isStarted;
+}
+
+- (BOOL)_stopProcess
+{
+    NSArray *pidList = [self _pidListForProcessesNamed:@"mongod"];
+    for (NSNumber *pid in pidList) {
+        if (kill([pid intValue], SIGINT) == -1) {
+            NSLog(@"[STOPPED]Process %@ not terminating properly, sending SIGKILL...", pid);
+            kill([pid intValue], SIGKILL);
+        }
+        NSLog(@"[STOPPED]Process %@ terminated.", pid);
+    }
+    return YES;
 }
 
 @end
