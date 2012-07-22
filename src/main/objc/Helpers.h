@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-//Name of the process.
-extern NSString * const HelpersProcessName;
-
 @interface Helpers : NSObject
 
 //Blocking call to start the process and returns YES in case of success.
@@ -22,10 +19,13 @@ extern NSString * const HelpersProcessName;
 //Check if their is a running process (and not only application) named processName.
 + (BOOL)isProcessRunning;
 
-//Returns the list of pids running a process named processName.
-+ (NSArray *)pidListForProcesses;
+//Check if the launch agent is installed.
++ (BOOL)isAutomaticStartupInstalled;
 
-//Returns the fullpath of a binary. nil if it has not been found.
-+ (NSString *)findBinary;
+//Install the launch agent.
++ (BOOL)installAutomaticStartup;
+
+//Removes the launch agent.
++ (BOOL)uninstallAutomaticStartup;
 
 @end

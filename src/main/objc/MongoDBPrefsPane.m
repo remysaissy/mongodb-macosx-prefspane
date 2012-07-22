@@ -40,6 +40,8 @@
         [self _setProcessAsStarted];
     else
         [self _setProcessAsStopped];
+    
+    [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
 }
 
 - (IBAction)onStartStopButtonPushed:(id)sender
@@ -55,6 +57,17 @@
 
 - (IBAction)onAutomaticStartButtonPushed:(id)sender
 {
+    if (self.instanceAutomaticStartButton.state) {
+        if ([Helpers installAutomaticStartup] == YES)
+            [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
+    } else {
+        if ([Helpers uninstallAutomaticStartup] == YES)
+            [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
+    }
+    if ([Helpers isProcessRunning] == YES)
+        [self _setProcessAsStarted];
+    else 
+        [self _setProcessAsStopped];
 }
 
 #pragma mark - Private methods.

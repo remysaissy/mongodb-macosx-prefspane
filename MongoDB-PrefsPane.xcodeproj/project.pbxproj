@@ -18,9 +18,14 @@
 		AD822B6215B9ADD300FB0B55 /* instance_stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5815B9ADD300FB0B55 /* instance_stopped.png */; };
 		AD822B6315B9ADD300FB0B55 /* logo-mongodb.png in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */; };
 		AD822B6415B9ADD300FB0B55 /* mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */; };
-		ADAF3CB515B9B67C008C79F0 /* com.remysaissy.mongodb-prefspane.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADAF3CB415B9B67C008C79F0 /* com.remysaissy.mongodb-prefspane.plist */; };
 		ADAF3CBB15BA9569008C79F0 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CB915BA9569008C79F0 /* Helpers.h */; };
 		ADAF3CBC15BA9569008C79F0 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CBA15BA9569008C79F0 /* Helpers.m */; };
+		ADAF3CCF15BC0257008C79F0 /* Helpers+Mongod.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */; };
+		ADAF3CD015BC0257008C79F0 /* Helpers+Mongod.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */; };
+		ADAF3CD315BC0275008C79F0 /* Helpers+Launchd.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */; };
+		ADAF3CD415BC0275008C79F0 /* Helpers+Launchd.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */; };
+		ADAF3CD715BC0D1F008C79F0 /* Helpers+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */; };
+		ADAF3CD815BC0D1F008C79F0 /* Helpers+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +45,15 @@
 		AD822B5815B9ADD300FB0B55 /* instance_stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instance_stopped.png; sourceTree = "<group>"; };
 		AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-mongodb.png"; sourceTree = "<group>"; };
 		AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mongodb.tiff; sourceTree = "<group>"; };
-		ADAF3CB415B9B67C008C79F0 /* com.remysaissy.mongodb-prefspane.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.remysaissy.mongodb-prefspane.plist"; sourceTree = "<group>"; };
 		ADAF3CB715B9E22A008C79F0 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		ADAF3CB915BA9569008C79F0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		ADAF3CBA15BA9569008C79F0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Mongod.h"; sourceTree = "<group>"; };
+		ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Mongod.m"; sourceTree = "<group>"; };
+		ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Launchd.h"; sourceTree = "<group>"; };
+		ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Launchd.m"; sourceTree = "<group>"; };
+		ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Private.h"; sourceTree = "<group>"; };
+		ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Private.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,12 @@
 				AD822B5115B9ADD300FB0B55 /* MongoDBPrefsPane.m */,
 				ADAF3CB915BA9569008C79F0 /* Helpers.h */,
 				ADAF3CBA15BA9569008C79F0 /* Helpers.m */,
+				ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */,
+				ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */,
+				ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */,
+				ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */,
+				ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */,
+				ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -131,7 +147,6 @@
 		AD822B5215B9ADD300FB0B55 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				ADAF3CB415B9B67C008C79F0 /* com.remysaissy.mongodb-prefspane.plist */,
 				AD822B5315B9ADD300FB0B55 /* InfoPlist.strings */,
 				AD822B5515B9ADD300FB0B55 /* MongoDBPrefsPane.xib */,
 				AD822B5715B9ADD300FB0B55 /* instance_started.png */,
@@ -152,6 +167,9 @@
 				AD822B5C15B9ADD300FB0B55 /* MongoDB-Prefix.pch in Headers */,
 				AD822B5D15B9ADD300FB0B55 /* MongoDBPrefsPane.h in Headers */,
 				ADAF3CBB15BA9569008C79F0 /* Helpers.h in Headers */,
+				ADAF3CCF15BC0257008C79F0 /* Helpers+Mongod.h in Headers */,
+				ADAF3CD315BC0275008C79F0 /* Helpers+Launchd.h in Headers */,
+				ADAF3CD715BC0D1F008C79F0 /* Helpers+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +232,6 @@
 				AD822B6215B9ADD300FB0B55 /* instance_stopped.png in Resources */,
 				AD822B6315B9ADD300FB0B55 /* logo-mongodb.png in Resources */,
 				AD822B6415B9ADD300FB0B55 /* mongodb.tiff in Resources */,
-				ADAF3CB515B9B67C008C79F0 /* com.remysaissy.mongodb-prefspane.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +254,9 @@
 			files = (
 				AD822B5E15B9ADD300FB0B55 /* MongoDBPrefsPane.m in Sources */,
 				ADAF3CBC15BA9569008C79F0 /* Helpers.m in Sources */,
+				ADAF3CD015BC0257008C79F0 /* Helpers+Mongod.m in Sources */,
+				ADAF3CD415BC0275008C79F0 /* Helpers+Launchd.m in Sources */,
+				ADAF3CD815BC0D1F008C79F0 /* Helpers+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
