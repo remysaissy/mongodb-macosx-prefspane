@@ -49,7 +49,7 @@
 
 + (NSArray *)_processArgumentsForProcessPath:(NSString *)processPath forLaunchctl:(BOOL)useLaunchctl
 {    
-    NSMutableArray *configPathArray = [[processPath pathComponents] mutableCopy];
+    NSMutableArray *configPathArray = [[[processPath pathComponents] mutableCopy] autorelease];
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 2  withObject:@"etc"];
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 1  withObject:@"mongod.conf"];
     NSString *configPath = [NSString pathWithComponents:configPathArray];
@@ -65,7 +65,7 @@
 + (NSString *)_findBinaryNamed:(NSString *)processName
 {
     NSString *binaryFullPath = nil;
-    NSString *path = [[[[NSProcessInfo processInfo] environment] objectForKey:@"PATH"] retain];
+    NSString *path = [[[[[NSProcessInfo processInfo] environment] objectForKey:@"PATH"] retain] autorelease];
     NSArray *searchPath = [path componentsSeparatedByString:@":"];
     for (NSString *filePath in searchPath) {
         binaryFullPath = [filePath stringByAppendingPathComponent:processName];

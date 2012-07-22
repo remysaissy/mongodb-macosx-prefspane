@@ -45,7 +45,6 @@
 		AD822B5815B9ADD300FB0B55 /* instance_stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instance_stopped.png; sourceTree = "<group>"; };
 		AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-mongodb.png"; sourceTree = "<group>"; };
 		AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mongodb.tiff; sourceTree = "<group>"; };
-		ADAF3CB715B9E22A008C79F0 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		ADAF3CB915BA9569008C79F0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		ADAF3CBA15BA9569008C79F0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Mongod.h"; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		AD822B1915B9951F00FB0B55 = {
 			isa = PBXGroup;
 			children = (
-				ADAF3CB715B9E22A008C79F0 /* Carbon.framework */,
 				AD822B4B15B9ADD300FB0B55 /* main */,
 				AD822B2815B9951F00FB0B55 /* Frameworks */,
 				AD822B2715B9951F00FB0B55 /* Products */,
@@ -289,6 +287,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -307,6 +306,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -317,6 +317,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -328,6 +329,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -335,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
+				CURRENT_PROJECT_VERSION = 1.0;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";
@@ -349,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
+				CURRENT_PROJECT_VERSION = 1.0;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";
