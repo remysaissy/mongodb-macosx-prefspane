@@ -20,11 +20,20 @@ The following functionalities are supported:
 * Start / Stop the MongoDB Server
 * Install / Uninstall MongoDB Server for startup at login time (LaunchAgent)
 
-Download
+Downloading
 -------
 
 The latest version is in the download directory of the source tree.
 (https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/MongoDB.prefPane.zip)
+
+
+Installing
+-------
+
+* Download the latest version
+* Unzip the archive
+* Execute MongoDB.prefPane. This will install it in your preferences panel
+
 
 Contributing
 ------------
