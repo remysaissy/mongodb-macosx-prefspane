@@ -1,0 +1,27 @@
+﻿
+/* Class = "NSWindow"; title = "<< do not localize >>"; ObjectID = "12"; */
+"12.title" = "<< do not localize >>";
+
+/* Class = "NSTextFieldCell"; title = "MongoDB server Status"; ObjectID = "106"; */
+"106.title" = "Etat du serveur MongoDB";
+
+/* Class = "NSTextFieldCell"; title = "The MongoDB Server Instance is "; ObjectID = "110"; */
+"110.title" = "L'instance de MongoDB est ";
+
+/* Class = "NSTextFieldCell"; title = "<< do not localize >>"; ObjectID = "115"; */
+"115.title" = "<< do not localize >>";
+
+/* Class = "NSButtonCell"; title = "<< do not localize >>"; ObjectID = "117"; */
+"117.title" = "<< do not localize >>";
+
+/* Class = "NSButtonCell"; title = "Automatically Start MongoDB Server on Startup"; ObjectID = "119"; */
+"119.title" = "Démarrer automatiquement MongoDB au lancement";
+
+/* Class = "NSTextFieldCell"; title = "<< do not localize >>"; ObjectID = "125"; */
+"125.title" = "<< do not localize >>";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "133"; */
+"133.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "You may select to have MongoDB server start automatically whenever your computer starts up."; ObjectID = "135"; */
+"135.title" = "Cochez la case pour que MongoDB démarre automatiquement au démarrage de l'ordinateur.";

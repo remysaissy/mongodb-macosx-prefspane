@@ -157,7 +157,7 @@
 						<object class="NSTextField" id="359888185">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 242}, {150, 17}}</string>
+							<string key="NSFrame">{{150, 242}, {175, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1016411497"/>
@@ -167,7 +167,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="762916002">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">MongoDB server Status</string>
+								<string key="NSContents">Etat du serveur MongoDB</string>
 								<object class="NSFont" key="NSSupport" id="688330447">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -198,7 +198,7 @@
 						<object class="NSTextField" id="409509544">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 174}, {211, 17}}</string>
+							<string key="NSFrame">{{150, 174}, {188, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="281245634"/>
@@ -208,7 +208,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="887380511">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">The MongoDB Server Instance is </string>
+								<string key="NSContents">L'instance de MongoDB est </string>
 								<reference key="NSSupport" ref="688330447"/>
 								<string key="NSCellIdentifier">_NS:1505</string>
 								<reference key="NSControlView" ref="409509544"/>
@@ -219,7 +219,7 @@
 						<object class="NSTextField" id="281245634">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{363, 174}, {56, 17}}</string>
+							<string key="NSFrame">{{332, 174}, {74, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="842711905"/>
@@ -272,7 +272,7 @@
 						<object class="NSButton" id="834327450">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 90}, {319, 18}}</string>
+							<string key="NSFrame">{{150, 90}, {360, 18}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1045725750"/>
@@ -282,7 +282,7 @@
 							<object class="NSButtonCell" key="NSCell" id="382624941">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">Automatically Start MongoDB Server on Startup</string>
+								<string key="NSContents">Démarrer automatiquement MongoDB au lancement</string>
 								<reference key="NSSupport" ref="688330447"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="834327450"/>
@@ -375,7 +375,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="545490034">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">4194304</int>
-								<string key="NSContents">You may select to have MongoDB server start automatically whenever your computer starts up.</string>
+								<string key="NSContents">Cochez la case pour que MongoDB démarre automatiquement au démarrage de l'ordinateur.</string>
 								<reference key="NSSupport" ref="4722362"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="1045725750"/>

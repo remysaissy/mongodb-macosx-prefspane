@@ -1,0 +1,18 @@
+﻿/* No comment provided by engineer. */
+"Start MongoDB Server" = "Start MongoDB Server";
+
+/* No comment provided by engineer. */
+"started" = "started";
+
+/* No comment provided by engineer. */
+"Stop MongoDB Server" = "Stop MongoDB Server";
+
+/* No comment provided by engineer. */
+"stopped" = "stopped";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button." = "The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button.";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently stopped. To start it, use the \"Start MongoDB Server\" button." = "The MongoDB Database Server is currently stopped. To start it, use the \"Start MongoDB Server\" button.";
+
