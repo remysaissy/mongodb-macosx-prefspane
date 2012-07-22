@@ -3,6 +3,8 @@ mongodb-macosx-prefspane
 
 This Preferences pane for MongoDB.
 
+![Screenshot](https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/doc/screenshot%20started.png)
+
 Prerequisite
 -------
 
