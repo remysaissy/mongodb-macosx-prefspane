@@ -24,6 +24,7 @@ Download
 -------
 
 The latest version is in the download directory of the source tree.
+(https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/MongoDB.prefPane.zip)
 
 Contributing
 ------------
