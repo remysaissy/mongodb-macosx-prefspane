@@ -305,7 +305,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -328,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -344,6 +344,7 @@
 				INFOPLIST_FILE = "src/main/config/MongoDB-PrefsPane-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_NAME = MongoDB;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -359,6 +360,7 @@
 				INFOPLIST_FILE = "src/main/config/MongoDB-PrefsPane-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_NAME = MongoDB;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
