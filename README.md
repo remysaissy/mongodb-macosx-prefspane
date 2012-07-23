@@ -21,6 +21,8 @@ The following functionalities are supported:
 * Indicates if the server is running.
 * Start / Stop the MongoDB Server
 * Install / Uninstall MongoDB Server for startup at login time (LaunchAgent)
+* Seamlessly migrate your homebrew launchd plist file so you won't loose your modifications when you check automatic startup
+* Disabling automatic startup won't loose your plist, it will be moved as a .disabled file and restored if needed
 
 Downloading
 -------
@@ -36,6 +38,7 @@ Installing
 * Unzip the archive
 * Execute MongoDB.prefPane. This will install it in your preferences panel
 
+Note: To Mountain Lion users. This application is presently not on the app store and therefore it is not signed. You can still install it but don't be surprised to have an alert about it.
 
 Contributing
 ------------

@@ -43,7 +43,14 @@
 + (BOOL)isAutomaticStartupInstalled
 {
     NSString *launchDaemonPath = [Helpers _launchDaemonPath];
-    return [[NSFileManager defaultManager] fileExistsAtPath:launchDaemonPath];
+    BOOL isInstalled = [[NSFileManager defaultManager] fileExistsAtPath:launchDaemonPath];
+    if (isInstalled == NO) {
+        if ([Helpers isProcessRunning] == YES
+            && [Helpers _neutralizeAnotherLaunchdProcess] == YES) {
+            isInstalled = [Helpers _installLaunchd];
+        }
+    }
+    return isInstalled;
 }
 
 + (BOOL)installAutomaticStartup

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD71428515BDF4E700FF90F5 /* NSString+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = AD71428315BDF4E700FF90F5 /* NSString+Log.h */; };
+		AD71428615BDF4E700FF90F5 /* NSString+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AD71428415BDF4E700FF90F5 /* NSString+Log.m */; };
 		AD822B2A15B9951F00FB0B55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2915B9951F00FB0B55 /* Cocoa.framework */; };
 		AD822B2C15B9951F00FB0B55 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */; };
 		AD822B5C15B9ADD300FB0B55 /* MongoDB-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AD822B4F15B9ADD300FB0B55 /* MongoDB-Prefix.pch */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD71428315BDF4E700FF90F5 /* NSString+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Log.h"; sourceTree = "<group>"; };
+		AD71428415BDF4E700FF90F5 /* NSString+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Log.m"; sourceTree = "<group>"; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -143,6 +147,8 @@
 				ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */,
 				ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */,
 				ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */,
+				AD71428315BDF4E700FF90F5 /* NSString+Log.h */,
+				AD71428415BDF4E700FF90F5 /* NSString+Log.m */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				ADAF3CCF15BC0257008C79F0 /* Helpers+Mongod.h in Headers */,
 				ADAF3CD315BC0275008C79F0 /* Helpers+Launchd.h in Headers */,
 				ADAF3CD715BC0D1F008C79F0 /* Helpers+Private.h in Headers */,
+				AD71428515BDF4E700FF90F5 /* NSString+Log.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +259,7 @@
 				ADAF3CD015BC0257008C79F0 /* Helpers+Mongod.m in Sources */,
 				ADAF3CD415BC0275008C79F0 /* Helpers+Launchd.m in Sources */,
 				ADAF3CD815BC0D1F008C79F0 /* Helpers+Private.m in Sources */,
+				AD71428615BDF4E700FF90F5 /* NSString+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +303,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -313,7 +321,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -325,7 +333,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -336,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -345,14 +353,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";
 				INFOPLIST_FILE = "src/main/config/MongoDB-PrefsPane-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_NAME = MongoDB;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -361,14 +369,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";
 				INFOPLIST_FILE = "src/main/config/MongoDB-PrefsPane-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				PRODUCT_NAME = MongoDB;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;

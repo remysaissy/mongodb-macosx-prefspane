@@ -21,9 +21,9 @@
     [task waitUntilExit];
     BOOL isStarted = [Helpers isProcessRunning];
     if (isStarted == YES)
-        NSLog(@"[STARTED] %@ %@", processPath, arguments);
+        [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"%@ %@", processPath, arguments];
     else
-        NSLog(@"[FAILED] %@ %@", processPath, arguments);
+        [NSString logErrorFromClass:[Helpers class] withSelector:_cmd withFormat:@"%@ %@", processPath, arguments];
     return isStarted;
 }
 
@@ -32,10 +32,10 @@
     NSArray *pidList = [Helpers _pidListForProcesses];
     for (NSNumber *pid in pidList) {
         if (kill([pid intValue], SIGINT) == -1) {
-            NSLog(@"[STOPPED] Process %@ not terminating properly, sending SIGKILL...", pid);
+            [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"Process %@ not terminating properly, sending SIGKILL...", pid];
             kill([pid intValue], SIGKILL);
         }
-        NSLog(@"[STOPPED] Process %@ terminated.", pid);
+        [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"Process %@ terminated.", pid];
     }
     return YES;
 }

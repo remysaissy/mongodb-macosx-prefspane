@@ -35,7 +35,9 @@
 @synthesize _isStarted;
 
 - (void)didSelect
-{
+{    
+    [[NSUserDefaults standardUserDefaults] setObject:[[[NSBundle bundleForClass:[MongoDBPrefsPane class]] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"MongoDBPrefsPaneVersion"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     if ([Helpers isProcessRunning] == YES)
         [self _setProcessAsStarted];
     else

@@ -12,7 +12,7 @@ struct kinfo_proc;
 
 @interface Helpers (Private)
 
-//Chekc if a process is running.
+//Check if a process is running. The pid of the process is provided if the parameter is not nil and the method returns YES.
 + (BOOL)_isProcessRunningForProcessNamed:(NSString *)processName;
 
 //Get a list of BSD process.

@@ -53,12 +53,12 @@
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 2  withObject:@"etc"];
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 1  withObject:@"mongod.conf"];
     NSString *configPath = [NSString pathWithComponents:configPathArray];
-    NSString *logPath = [@"~/Library/Logs/mongod.log" stringByExpandingTildeInPath];
+    NSString *processLogPath = [@"~/Library/Logs/mongod.log" stringByExpandingTildeInPath];
     NSArray *arguments = nil;
     if (useLaunchctl == YES)
-        arguments = [NSArray arrayWithObjects:@"run", @"--logpath", logPath, @"--config", configPath, nil];
+        arguments = [NSArray arrayWithObjects:@"run", @"--config", configPath, nil];
     else
-        arguments = [NSArray arrayWithObjects:@"run", @"--fork", @"--logpath", logPath, @"--config", configPath, nil];
+        arguments = [NSArray arrayWithObjects:@"run", @"--logpath", processLogPath, @"--fork", @"--config", configPath, nil];
     return arguments;
 }
 
