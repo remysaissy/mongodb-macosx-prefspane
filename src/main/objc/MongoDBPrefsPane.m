@@ -21,6 +21,9 @@
 //The last state of the server which is displayed on the UI.
 @property (assign, nonatomic) BOOL  _isStarted;
 
+//The autoupdater instance.
+@property (retain, nonatomic) AutoUpdater   *_autoUpdater;
+
 //Configure the UI with the process started.
 - (void)_setProcessAsStarted;
 
@@ -40,6 +43,7 @@
 
 //Private properties.
 @synthesize _isStarted;
+@synthesize _autoUpdater;
 
 - (void)didSelect
 {    
@@ -49,7 +53,8 @@
         [self _setProcessAsStopped];
     
     [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
-    [AutoUpdater checkForUpdate];
+    self._autoUpdater = [[[AutoUpdater alloc] init] autorelease];
+    [self._autoUpdater checkForUpdate];
 }
 
 - (IBAction)onStartStopButtonPushed:(id)sender

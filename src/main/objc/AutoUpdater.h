@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AutoUpdater : NSObject
+@interface AutoUpdater : NSObject<NSURLConnectionDelegate>
 
 //Check for a new version.
-+ (void)checkForUpdate;
+- (void)checkForUpdate;
 
 @end
