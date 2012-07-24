@@ -10,6 +10,12 @@
 #import "AutoUpdater.h"
 #import "Helpers.h"
 
+//Redefine it since mainBundle refers to the system preferences app and not to our prefspane.
+#undef NSLocalizedString
+#define NSLocalizedString(key, comment) \
+[[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:@"" table:nil]
+
+
 @interface MongoDBPrefsPane()
 
 //The last state of the server which is displayed on the UI.
@@ -75,7 +81,7 @@
 #pragma mark - Private methods.
 
 - (void)_setProcessAsStarted
-{
+{    
     [self.instanceStatusTextField setStringValue:NSLocalizedString(@"started", nil)];
     [self.instanceStatusTextField setTextColor:[NSColor greenColor]];
     [self.instanceStartStopButton setTitle:NSLocalizedString(@"Stop MongoDB Server", nil)];
