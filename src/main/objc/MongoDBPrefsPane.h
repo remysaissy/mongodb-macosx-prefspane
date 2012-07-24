@@ -14,6 +14,9 @@
 @property (retain, nonatomic) IBOutlet NSImageView  *instanceStatusStoppedImageView;
 @property (retain, nonatomic) IBOutlet NSImageView  *instanceStatusStartedImageView;
 
+//Label asking the user restart its preferences.
+@property (retain, nonatomic) IBOutlet NSTextField  *panelUpdatedTextField;
+
 // The description text of the server status.
 @property (retain, nonatomic) IBOutlet NSTextField  *instanceStatusDescriptionTextField;
 

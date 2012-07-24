@@ -25,3 +25,6 @@
 
 /* Class = "NSTextFieldCell"; title = "You may select to have MongoDB server start automatically whenever your computer starts up."; ObjectID = "135"; */
 "135.title" = "You may select to have MongoDB server start automatically whenever your computer starts up.";
+
+/* Class = "NSTextFieldCell"; title = "A new version has been installed. Please restart system preferences."; ObjectID = "144" */
+"144.title" = "A new version has been installed. Please restart system preferences.";

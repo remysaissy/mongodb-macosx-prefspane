@@ -11,6 +11,7 @@
 		AD71428615BDF4E700FF90F5 /* NSString+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AD71428415BDF4E700FF90F5 /* NSString+Log.m */; };
 		AD7142A415BE728000FF90F5 /* AutoUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7142A215BE728000FF90F5 /* AutoUpdater.h */; };
 		AD7142A515BE728000FF90F5 /* AutoUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7142A315BE728000FF90F5 /* AutoUpdater.m */; };
+		AD7142B415BECCA900FF90F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7142B315BECCA900FF90F5 /* Security.framework */; };
 		AD822B2A15B9951F00FB0B55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2915B9951F00FB0B55 /* Cocoa.framework */; };
 		AD822B2C15B9951F00FB0B55 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */; };
 		AD822B5C15B9ADD300FB0B55 /* MongoDB-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AD822B4F15B9ADD300FB0B55 /* MongoDB-Prefix.pch */; };
@@ -41,6 +42,7 @@
 		AD7142AA15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/MongoDBPrefsPane.strings"; sourceTree = "<absolute>"; };
 		AD7142AB15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		AD7142AC15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		AD7142B315BECCA900FF90F5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7142B415BECCA900FF90F5 /* Security.framework in Frameworks */,
 				AD822B2A15B9951F00FB0B55 /* Cocoa.framework in Frameworks */,
 				AD822B2C15B9951F00FB0B55 /* PreferencePanes.framework in Frameworks */,
 			);
@@ -101,6 +104,7 @@
 		AD822B2815B9951F00FB0B55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD7142B315BECCA900FF90F5 /* Security.framework */,
 				AD822B2915B9951F00FB0B55 /* Cocoa.framework */,
 				AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */,
 				AD822B2D15B9951F00FB0B55 /* Other Frameworks */,

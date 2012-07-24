@@ -37,6 +37,7 @@
 @synthesize instanceStatusStoppedImageView;
 @synthesize instanceStatusStartedImageView;
 @synthesize instanceStatusDescriptionTextField;
+@synthesize panelUpdatedTextField;
 @synthesize instanceStatusTextField;
 @synthesize instanceStartStopButton;
 @synthesize instanceAutomaticStartButton;
@@ -44,6 +45,13 @@
 //Private properties.
 @synthesize _isStarted;
 @synthesize _autoUpdater;
+
+
+- (void)mainViewDidLoad
+{
+    self._autoUpdater = [[[AutoUpdater alloc] init] autorelease];
+    [self._autoUpdater addObserver:self forKeyPath:@"hasUpdated" options:NSKeyValueObservingOptionNew context:nil];
+}
 
 - (void)didSelect
 {    
@@ -53,8 +61,16 @@
         [self _setProcessAsStopped];
     
     [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
-    self._autoUpdater = [[[AutoUpdater alloc] init] autorelease];
     [self._autoUpdater checkForUpdate];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{    
+    if (object == self._autoUpdater 
+        && [@"hasUpdated" isEqualToString:keyPath]        
+        && self._autoUpdater.hasUpdated == YES) {
+        [self.panelUpdatedTextField setHidden:NO];
+    }
 }
 
 - (IBAction)onStartStopButtonPushed:(id)sender

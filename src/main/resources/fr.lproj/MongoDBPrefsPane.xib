@@ -135,7 +135,6 @@
 							<string key="NSFrame">{{428, 17}, {190, 63}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -383,11 +382,35 @@
 								<reference key="NSTextColor" ref="259119962"/>
 							</object>
 						</object>
+						<object class="NSTextField" id="24023507">
+							<reference key="NSNextResponder" ref="1037298196"/>
+							<int key="NSvFlags">-2147483380</int>
+							<string key="NSFrame">{{164, 264}, {508, 17}}</string>
+							<reference key="NSSuperview" ref="1037298196"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="359888185"/>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
+							<string key="NSReuseIdentifierKey">_NS:1505</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="402131395">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents">Une nouvelle version a été installée. Veuillez relancer les préférences système.</string>
+								<reference key="NSSupport" ref="688330447"/>
+								<string key="NSCellIdentifier">_NS:1505</string>
+								<reference key="NSControlView" ref="24023507"/>
+								<reference key="NSBackgroundColor" ref="299813159"/>
+								<object class="NSColor" key="NSTextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MCAwLjQwMTA4OTE4OCAwAA</bytes>
+								</object>
+							</object>
+						</object>
 					</array>
 					<string key="NSFrameSize">{668, 280}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="359888185"/>
+					<reference key="NSNextKeyView" ref="24023507"/>
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
@@ -471,6 +494,14 @@
 					</object>
 					<int key="connectionID">143</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">panelUpdatedTextField</string>
+						<reference key="source" ref="294453543"/>
+						<reference key="destination" ref="24023507"/>
+					</object>
+					<int key="connectionID">148</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -516,6 +547,7 @@
 							<reference ref="678593307"/>
 							<reference ref="259463785"/>
 							<reference ref="281245634"/>
+							<reference ref="24023507"/>
 						</array>
 						<reference key="parent" ref="660800786"/>
 					</object>
@@ -667,6 +699,19 @@
 						<reference key="object" ref="114346368"/>
 						<reference key="parent" ref="259463785"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">146</int>
+						<reference key="object" ref="24023507"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="402131395"/>
+						</array>
+						<reference key="parent" ref="1037298196"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">147</int>
+						<reference key="object" ref="402131395"/>
+						<reference key="parent" ref="24023507"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -700,13 +745,15 @@
 				<string key="135.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="138.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="139.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="146.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="147.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">143</int>
+			<int key="maxID">148</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -734,6 +781,7 @@
 						<string key="instanceStatusStartedImageView">NSImageView</string>
 						<string key="instanceStatusStoppedImageView">NSImageView</string>
 						<string key="instanceStatusTextField">NSTextField</string>
+						<string key="panelUpdatedTextField">NSTextField</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="instanceAutomaticStartButton">
@@ -758,6 +806,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="instanceStatusTextField">
 							<string key="name">instanceStatusTextField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="panelUpdatedTextField">
+							<string key="name">panelUpdatedTextField</string>
 							<string key="candidateClassName">NSTextField</string>
 						</object>
 					</dictionary>
