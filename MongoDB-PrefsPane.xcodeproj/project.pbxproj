@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD71428515BDF4E700FF90F5 /* NSString+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = AD71428315BDF4E700FF90F5 /* NSString+Log.h */; };
 		AD71428615BDF4E700FF90F5 /* NSString+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AD71428415BDF4E700FF90F5 /* NSString+Log.m */; };
+		AD7142A415BE728000FF90F5 /* AutoUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7142A215BE728000FF90F5 /* AutoUpdater.h */; };
+		AD7142A515BE728000FF90F5 /* AutoUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7142A315BE728000FF90F5 /* AutoUpdater.m */; };
 		AD822B2A15B9951F00FB0B55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2915B9951F00FB0B55 /* Cocoa.framework */; };
 		AD822B2C15B9951F00FB0B55 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */; };
 		AD822B5C15B9ADD300FB0B55 /* MongoDB-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AD822B4F15B9ADD300FB0B55 /* MongoDB-Prefix.pch */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		AD71428315BDF4E700FF90F5 /* NSString+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Log.h"; sourceTree = "<group>"; };
 		AD71428415BDF4E700FF90F5 /* NSString+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Log.m"; sourceTree = "<group>"; };
+		AD7142A215BE728000FF90F5 /* AutoUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUpdater.h; sourceTree = "<group>"; };
+		AD7142A315BE728000FF90F5 /* AutoUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUpdater.m; sourceTree = "<group>"; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -149,6 +153,8 @@
 				ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */,
 				AD71428315BDF4E700FF90F5 /* NSString+Log.h */,
 				AD71428415BDF4E700FF90F5 /* NSString+Log.m */,
+				AD7142A215BE728000FF90F5 /* AutoUpdater.h */,
+				AD7142A315BE728000FF90F5 /* AutoUpdater.m */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 				ADAF3CD315BC0275008C79F0 /* Helpers+Launchd.h in Headers */,
 				ADAF3CD715BC0D1F008C79F0 /* Helpers+Private.h in Headers */,
 				AD71428515BDF4E700FF90F5 /* NSString+Log.h in Headers */,
+				AD7142A415BE728000FF90F5 /* AutoUpdater.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 				ADAF3CD415BC0275008C79F0 /* Helpers+Launchd.m in Sources */,
 				ADAF3CD815BC0D1F008C79F0 /* Helpers+Private.m in Sources */,
 				AD71428615BDF4E700FF90F5 /* NSString+Log.m in Sources */,
+				AD7142A515BE728000FF90F5 /* AutoUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

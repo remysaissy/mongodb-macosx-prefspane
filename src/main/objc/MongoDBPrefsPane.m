@@ -7,6 +7,7 @@
 //
 
 #import "MongoDBPrefsPane.h"
+#import "AutoUpdater.h"
 #import "Helpers.h"
 
 @interface MongoDBPrefsPane()
@@ -36,14 +37,13 @@
 
 - (void)didSelect
 {    
-    [[NSUserDefaults standardUserDefaults] setObject:[[[NSBundle bundleForClass:[MongoDBPrefsPane class]] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"MongoDBPrefsPaneVersion"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     if ([Helpers isProcessRunning] == YES)
         [self _setProcessAsStarted];
     else
         [self _setProcessAsStopped];
     
     [self.instanceAutomaticStartButton setState:[Helpers isAutomaticStartupInstalled]];
+    [AutoUpdater checkForUpdate];
 }
 
 - (IBAction)onStartStopButtonPushed:(id)sender
