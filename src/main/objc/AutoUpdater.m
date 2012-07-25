@@ -109,9 +109,9 @@ enum AutoUpdateSteps
 {
     NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    [f setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]]; 
+    [f setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]]; 
     
-    NSString *versionString = [[[NSBundle bundleForClass:[AutoUpdater class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *versionString = [[[[[NSBundle bundleForClass:[AutoUpdater class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"] retain] autorelease];
     NSNumber *versionNumber = [f numberFromString:versionString];
     
     NSString *latestVersionString = [[[NSString alloc] initWithData:self._data encoding:NSUTF8StringEncoding] autorelease];

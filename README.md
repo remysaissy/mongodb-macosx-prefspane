@@ -5,38 +5,41 @@ This Preferences pane for MongoDB.
 
 ![Screenshot](https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/doc/screenshot%20started.png)
 
-Prerequisite
--------
-
-Install MongoDB using homebrew (http://mxcl.github.com/homebrew/).
-
-    brew install mongodb
-
 
 Functionalities
--------
+---------------
 
-The following functionalities are supported:
+* Runs on MacOSX Snow Leopard, Lion and Moutain Lion
+* Indicates if the server is running
+* Manual start/stop of the MongoDB server
+* Enable/disable automatic startup of the server at boot
+* Keep your plist’s customizations safe
+* Homebrew’s launchd plist is migrated
+* Enable/disable automatic startup don’t delete the launchd plist
+* Automatic update
+* New versions install automatically
+* A green label at the top right corner informs you that you should restart your system preferences
+* Available in several languages
+** English
+** French
+** Simplified Chinese
+** Spanish
+** Brazilian / Portugese
 
-* Indicates if the server is running.
-* Start / Stop the MongoDB Server
-* Install / Uninstall MongoDB Server for startup at login time (LaunchAgent)
-* Seamlessly migrate your homebrew launchd plist file so you won't loose your modifications when you check automatic startup
-* Disabling automatic startup won't loose your plist, it will be moved as a .disabled file and restored if needed
+Prerequisites
+-------------
 
-Downloading
--------
+It does not embed a MongoDB Server. Therefore, you first have to install MongoDB.
+A simple way to do it is by using Homebrew to install MongoDB.
 
-The latest version is in the download directory of the source tree.
-(https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/MongoDB.prefPane.zip)
+$brew install mongodb
 
+Installation
+------------
 
-Installing
--------
-
-* Download the latest version
-* Unzip the archive
-* Execute MongoDB.prefPane. This will install it in your preferences panel
+1.	Download the latest version: https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/MongoDB.prefPane.zip
+2.	Unzip MongoDB.prefPane.zip
+3.	Double click on MongoDB.prefPane. This will install it in your System Preferences
 
 Note: To Mountain Lion users. This application is presently not on the app store and therefore it is not signed. You can still install it but don't be surprised to have an alert about it.
 

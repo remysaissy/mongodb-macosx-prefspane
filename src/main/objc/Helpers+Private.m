@@ -30,7 +30,7 @@
     for (int k = 0; k < processCount; k++) {
         struct kinfo_proc *proc = NULL;
         proc = &processList[k];
-        NSString *fullName = [[self _infoForPID:proc->kp_proc.p_pid] objectForKey:(id)kCFBundleNameKey];
+        NSString *fullName = [[[[self _infoForPID:proc->kp_proc.p_pid] objectForKey:(id)kCFBundleNameKey] retain] autorelease];
         if (fullName == nil) 
             fullName = [NSString stringWithFormat:@"%s",proc->kp_proc.p_comm];
         if ([processName isEqualToString:fullName] == YES) {
@@ -85,7 +85,7 @@
     for (int k = 0; k < processCount; k++) {
         struct kinfo_proc *proc = NULL;
         proc = &processList[k];
-        NSString *fullName = [[self _infoForPID:proc->kp_proc.p_pid] objectForKey:(id)kCFBundleNameKey];
+        NSString *fullName = [[[[self _infoForPID:proc->kp_proc.p_pid] objectForKey:(id)kCFBundleNameKey] retain] autorelease];
         if (fullName == nil) 
             fullName = [NSString stringWithFormat:@"%s",proc->kp_proc.p_comm];
         if ([@"mongod" isEqualToString:fullName] == YES)
