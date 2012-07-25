@@ -44,6 +44,10 @@
 		AD7142B515BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		AD7142B615BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 		AD7142BE15BFC7DA00FF90F5 /* MongoDBPrefsPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoDBPrefsPane.m; sourceTree = "<group>"; };
+		AD7142BF15BFDB9900FF90F5 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/es.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		AD7142C015BFDB9900FF90F5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		AD7142C115BFDB9E00FF90F5 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/pt.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		AD7142C215BFDB9E00FF90F5 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/pt.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -282,6 +286,8 @@
 				AD822B5615B9ADD300FB0B55 /* en */,
 				AD7142AC15BE824B00FF90F5 /* fr */,
 				AD7142B615BF502E00FF90F5 /* zh-Hans */,
+				AD7142BF15BFDB9900FF90F5 /* es */,
+				AD7142C115BFDB9E00FF90F5 /* pt */,
 			);
 			name = MongoDBPrefsPane.xib;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				AD945F8415BC417B000A74FF /* en */,
 				AD7142AB15BE824B00FF90F5 /* fr */,
 				AD7142B515BF502E00FF90F5 /* zh-Hans */,
+				AD7142C015BFDB9900FF90F5 /* es */,
+				AD7142C215BFDB9E00FF90F5 /* pt */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -306,7 +314,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -336,7 +344,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -356,7 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";
@@ -372,7 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = "${inherited}";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/main/objc/MongoDB-Prefix.pch";

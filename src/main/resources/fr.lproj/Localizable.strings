@@ -2,13 +2,13 @@
 "Start MongoDB Server" = "Démarrer MongoDB";
 
 /* No comment provided by engineer. */
-"started" = "démarrée";
+"started" = "démarré";
 
 /* No comment provided by engineer. */
 "Stop MongoDB Server" = "Arrêter MongoDB";
 
 /* No comment provided by engineer. */
-"stopped" = "arrêtée";
+"stopped" = "arrêté";
 
 /* No comment provided by engineer. */
 "The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button." = "Le serveur de base de données MongoDB est actuellement démarré. Pour l'arrêter, utilisez le bouton \"Arrêter MongoDB\".";

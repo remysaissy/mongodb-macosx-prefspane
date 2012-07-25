@@ -135,6 +135,7 @@
 							<string key="NSFrame">{{428, 17}, {190, 63}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -218,7 +219,7 @@
 						<object class="NSTextField" id="281245634">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{276, 155}, {112, 17}}</string>
+							<string key="NSFrame">{{276, 156}, {112, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="842711905"/>
@@ -232,7 +233,7 @@
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande-Bold</string>
 									<double key="NSSize">13</double>
-									<int key="NSfFlags">16</int>
+									<int key="NSfFlags">2072</int>
 								</object>
 								<string key="NSCellIdentifier">_NS:1505</string>
 								<reference key="NSControlView" ref="281245634"/>
@@ -246,7 +247,7 @@
 						<object class="NSButton" id="842711905">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{434, 146}, {187, 32}}</string>
+							<string key="NSFrame">{{422, 146}, {188, 32}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="441067050"/>
@@ -315,10 +316,10 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">4194304</int>
 								<string key="NSContents">&lt;&lt; do not localize &gt;&gt;</string>
-								<object class="NSFont" key="NSSupport" id="4722362">
+								<object class="NSFont" key="NSSupport" id="26">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">11</double>
-									<int key="NSfFlags">16</int>
+									<int key="NSfFlags">3100</int>
 								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="216137139"/>
@@ -363,7 +364,7 @@
 						<object class="NSTextField" id="1045725750">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 28}, {319, 56}}</string>
+							<string key="NSFrame">{{150, 28}, {286, 56}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="678593307"/>
@@ -375,7 +376,7 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">4194304</int>
 								<string key="NSContents">您可以选择开机时自动运行MongoDB服务器。</string>
-								<reference key="NSSupport" ref="4722362"/>
+								<reference key="NSSupport" ref="26"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="1045725750"/>
 								<reference key="NSBackgroundColor" ref="299813159"/>
@@ -543,11 +544,11 @@
 							<reference ref="216137139"/>
 							<reference ref="409509544"/>
 							<reference ref="1016411497"/>
-							<reference ref="842711905"/>
 							<reference ref="678593307"/>
 							<reference ref="259463785"/>
 							<reference ref="281245634"/>
 							<reference ref="202580651"/>
+							<reference ref="842711905"/>
 						</array>
 						<reference key="parent" ref="660800786"/>
 					</object>

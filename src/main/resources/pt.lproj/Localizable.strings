@@ -1,0 +1,17 @@
+/* No comment provided by engineer. */
+"Start MongoDB Server" = "Iniciar servidor MongoDB";
+
+/* No comment provided by engineer. */
+"started" = "iniciado";
+
+/* No comment provided by engineer. */
+"Stop MongoDB Server" = "Parar servidor MongoDB";
+
+/* No comment provided by engineer. */
+"stopped" = "parado";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button." = "O servidor MongoDB está actualmente iniciado. Para lhe parar, use o botão \"Parar servidor MongoDB\".";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently stopped. To start it, use the \"Start MongoDB Server\" button." = "O servidor MongoDB está actualmente parado. Para lhe iniciar, use o botão \"Iniciar servidor MongoDB\".";
