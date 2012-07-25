@@ -5,7 +5,6 @@ This Preferences pane for MongoDB.
 
 ![Screenshot](https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/doc/screenshot%20started.png)
 
-
 Functionalities
 ---------------
 
@@ -19,12 +18,15 @@ Functionalities
 * Automatic update
 * New versions install automatically
 * A green label at the top right corner informs you that you should restart your system preferences
-* Available in several languages
-** English
-** French
-** Simplified Chinese
-** Spanish
-** Brazilian / Portugese
+
+Localization
+------------
+
+* English
+* French
+* Simplified Chinese
+* Spanish
+* Brazilian / Portugese
 
 Prerequisites
 -------------
