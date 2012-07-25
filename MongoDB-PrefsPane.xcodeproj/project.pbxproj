@@ -43,6 +43,9 @@
 		AD7142AB15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		AD7142AC15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 		AD7142B315BECCA900FF90F5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AD7142B515BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		AD7142B615BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		AD7142B715BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/MongoDBPrefsPane.strings"; sourceTree = "<absolute>"; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -283,6 +286,7 @@
 			children = (
 				AD822B5615B9ADD300FB0B55 /* en */,
 				AD7142AC15BE824B00FF90F5 /* fr */,
+				AD7142B615BF502E00FF90F5 /* zh-Hans */,
 			);
 			name = MongoDBPrefsPane.xib;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 			children = (
 				AD945F8415BC417B000A74FF /* en */,
 				AD7142AB15BE824B00FF90F5 /* fr */,
+				AD7142B515BF502E00FF90F5 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			children = (
 				AD945F8A15BC472C000A74FF /* en */,
 				AD7142AA15BE824B00FF90F5 /* fr */,
+				AD7142B715BF502E00FF90F5 /* zh-Hans */,
 			);
 			name = MongoDBPrefsPane.strings;
 			sourceTree = "<group>";

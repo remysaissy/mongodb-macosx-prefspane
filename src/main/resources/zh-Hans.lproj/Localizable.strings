@@ -1,0 +1,17 @@
+﻿/* No comment provided by engineer. */
+"Start MongoDB Server" = "开启MongoDB服务器";
+
+/* No comment provided by engineer. */
+"started" = "正在运行";
+
+/* No comment provided by engineer. */
+"Stop MongoDB Server" = "关闭MongoDB服务器";
+
+/* No comment provided by engineer. */
+"stopped" = "已关闭";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button." ＝ "MongoDB服务器正在运行。如想停止运行，请按 \"关闭MongoDB服务器\" 按钮。";
+
+/* No comment provided by engineer. */
+"The MongoDB Database Server is currently stopped. To start it, use the \"Start MongoDB Server\" button." = "MongoDB服务器已停止运行。如想开启，请按 \"开启MongoDB服务器\" 按钮。";

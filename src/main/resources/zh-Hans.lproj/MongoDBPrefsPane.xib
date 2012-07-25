@@ -135,7 +135,6 @@
 							<string key="NSFrame">{{428, 17}, {190, 63}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -157,7 +156,7 @@
 						<object class="NSTextField" id="359888185">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 242}, {150, 17}}</string>
+							<string key="NSFrame">{{150, 242}, {130, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1016411497"/>
@@ -167,7 +166,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="762916002">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">MongoDB server Status</string>
+								<string key="NSContents">MongoDB服务器状态</string>
 								<object class="NSFont" key="NSSupport" id="688330447">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -198,7 +197,7 @@
 						<object class="NSTextField" id="409509544">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{150, 156}, {211, 17}}</string>
+							<string key="NSFrame">{{150, 156}, {130, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="281245634"/>
@@ -208,7 +207,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="887380511">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">The MongoDB Server Instance is </string>
+								<string key="NSContents">MongoDB服务器是</string>
 								<reference key="NSSupport" ref="688330447"/>
 								<string key="NSCellIdentifier">_NS:1505</string>
 								<reference key="NSControlView" ref="409509544"/>
@@ -219,7 +218,7 @@
 						<object class="NSTextField" id="281245634">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{363, 156}, {56, 17}}</string>
+							<string key="NSFrame">{{276, 155}, {112, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="842711905"/>
@@ -282,7 +281,7 @@
 							<object class="NSButtonCell" key="NSCell" id="382624941">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">Automatically Start MongoDB Server on Startup</string>
+								<string key="NSContents">开机时自动运行MongoDB服务器</string>
 								<reference key="NSSupport" ref="688330447"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="834327450"/>
@@ -375,7 +374,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="545490034">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">4194304</int>
-								<string key="NSContents">You may select to have MongoDB server start automatically whenever your computer starts up.</string>
+								<string key="NSContents">您可以选择开机时自动运行MongoDB服务器。</string>
 								<reference key="NSSupport" ref="4722362"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="1045725750"/>
@@ -386,7 +385,7 @@
 						<object class="NSTextField" id="202580651">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">-2147483380</int>
-							<string key="NSFrame">{{230, 264}, {440, 17}}</string>
+							<string key="NSFrame">{{465, 263}, {206, 17}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="359888185"/>
@@ -396,7 +395,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="815747817">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">A new version has been installed. Please restart system preferences.</string>
+								<string key="NSContents">新版本已安装，请重启系统设置。</string>
 								<reference key="NSSupport" ref="688330447"/>
 								<string key="NSCellIdentifier">_NS:1505</string>
 								<reference key="NSControlView" ref="202580651"/>
@@ -543,11 +542,11 @@
 							<reference ref="1045725750"/>
 							<reference ref="216137139"/>
 							<reference ref="409509544"/>
-							<reference ref="281245634"/>
 							<reference ref="1016411497"/>
 							<reference ref="842711905"/>
 							<reference ref="678593307"/>
 							<reference ref="259463785"/>
+							<reference ref="281245634"/>
 							<reference ref="202580651"/>
 						</array>
 						<reference key="parent" ref="660800786"/>
