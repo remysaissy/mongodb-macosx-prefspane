@@ -132,7 +132,7 @@
 								<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 								<string>NeXT TIFF v4.0 pasteboard type</string>
 							</set>
-							<string key="NSFrame">{{428, 17}, {190, 63}}</string>
+							<string key="NSFrame">{{425, 20}, {190, 63}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -247,7 +247,7 @@
 						<object class="NSButton" id="842711905">
 							<reference key="NSNextResponder" ref="1037298196"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{422, 146}, {188, 32}}</string>
+							<string key="NSFrame">{{434, 146}, {188, 32}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="441067050"/>
