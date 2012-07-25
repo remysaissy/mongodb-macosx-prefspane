@@ -15,7 +15,6 @@
 #define NSLocalizedString(key, comment) \
 [[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:@"" table:nil]
 
-
 @interface MongoDBPrefsPane()
 
 //The last state of the server which is displayed on the UI.
