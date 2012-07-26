@@ -38,16 +38,8 @@
 		AD71428415BDF4E700FF90F5 /* NSString+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Log.m"; sourceTree = "<group>"; };
 		AD7142A215BE728000FF90F5 /* AutoUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUpdater.h; sourceTree = "<group>"; };
 		AD7142A315BE728000FF90F5 /* AutoUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUpdater.m; sourceTree = "<group>"; };
-		AD7142AB15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
-		AD7142AC15BE824B00FF90F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/fr.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 		AD7142B315BECCA900FF90F5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AD7142B515BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
-		AD7142B615BF502E00FF90F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 		AD7142BE15BFC7DA00FF90F5 /* MongoDBPrefsPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoDBPrefsPane.m; sourceTree = "<group>"; };
-		AD7142BF15BFDB9900FF90F5 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/es.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
-		AD7142C015BFDB9900FF90F5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
-		AD7142C115BFDB9E00FF90F5 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/pt.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
-		AD7142C215BFDB9E00FF90F5 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "/Users/remy/Projects/perso/mongodb-macosx-prefspane/src/main/resources/pt.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		AD822B2615B9951F00FB0B55 /* MongoDB.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -71,6 +63,14 @@
 		ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Launchd.m"; sourceTree = "<group>"; };
 		ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Private.h"; sourceTree = "<group>"; };
 		ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Private.m"; sourceTree = "<group>"; };
+		ADC4D28F15C194D500CEB84A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29015C194D500CEB84A /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/fr.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		ADC4D29115C194DD00CEB84A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29215C194DD00CEB84A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		ADC4D29315C194E200CEB84A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/pt.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29415C194E200CEB84A /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/pt.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		ADC4D29515C194F200CEB84A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29615C194F200CEB84A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,10 +284,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD822B5615B9ADD300FB0B55 /* en */,
-				AD7142AC15BE824B00FF90F5 /* fr */,
-				AD7142B615BF502E00FF90F5 /* zh-Hans */,
-				AD7142BF15BFDB9900FF90F5 /* es */,
-				AD7142C115BFDB9E00FF90F5 /* pt */,
+				ADC4D29015C194D500CEB84A /* fr */,
+				ADC4D29215C194DD00CEB84A /* zh-Hans */,
+				ADC4D29415C194E200CEB84A /* pt */,
+				ADC4D29615C194F200CEB84A /* es */,
 			);
 			name = MongoDBPrefsPane.xib;
 			sourceTree = "<group>";
@@ -296,10 +296,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD945F8415BC417B000A74FF /* en */,
-				AD7142AB15BE824B00FF90F5 /* fr */,
-				AD7142B515BF502E00FF90F5 /* zh-Hans */,
-				AD7142C015BFDB9900FF90F5 /* es */,
-				AD7142C215BFDB9E00FF90F5 /* pt */,
+				ADC4D28F15C194D500CEB84A /* fr */,
+				ADC4D29115C194DD00CEB84A /* zh-Hans */,
+				ADC4D29315C194E200CEB84A /* pt */,
+				ADC4D29515C194F200CEB84A /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
