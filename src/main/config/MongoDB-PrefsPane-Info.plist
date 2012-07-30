@@ -15,19 +15,21 @@
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
+	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012 Octo Technology. All rights reserved.</string>
+	<string>Copyleft 2012 GPL Rémy SAISSY</string>
 	<key>NSMainNibFile</key>
 	<string>MongoDBPrefsPane</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>mongodb.tiff</string>
+	<string>mongodb-pane.tiff</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>MongoDB</string>
 	<key>NSPrincipalClass</key>

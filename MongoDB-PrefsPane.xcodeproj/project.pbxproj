@@ -18,10 +18,6 @@
 		AD822B5C15B9ADD300FB0B55 /* MongoDB-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AD822B4F15B9ADD300FB0B55 /* MongoDB-Prefix.pch */; };
 		AD822B5D15B9ADD300FB0B55 /* MongoDBPrefsPane.h in Headers */ = {isa = PBXBuildFile; fileRef = AD822B5015B9ADD300FB0B55 /* MongoDBPrefsPane.h */; };
 		AD822B6015B9ADD300FB0B55 /* MongoDBPrefsPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5515B9ADD300FB0B55 /* MongoDBPrefsPane.xib */; };
-		AD822B6115B9ADD300FB0B55 /* instance_started.png in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5715B9ADD300FB0B55 /* instance_started.png */; };
-		AD822B6215B9ADD300FB0B55 /* instance_stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5815B9ADD300FB0B55 /* instance_stopped.png */; };
-		AD822B6315B9ADD300FB0B55 /* logo-mongodb.png in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */; };
-		AD822B6415B9ADD300FB0B55 /* mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */; };
 		ADAF3CBB15BA9569008C79F0 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CB915BA9569008C79F0 /* Helpers.h */; };
 		ADAF3CBC15BA9569008C79F0 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CBA15BA9569008C79F0 /* Helpers.m */; };
 		ADAF3CCF15BC0257008C79F0 /* Helpers+Mongod.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */; };
@@ -31,6 +27,10 @@
 		ADAF3CD715BC0D1F008C79F0 /* Helpers+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */; };
 		ADAF3CD815BC0D1F008C79F0 /* Helpers+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */; };
 		ADC955FA15BC4D4600E8D3FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD945F8315BC417B000A74FF /* Localizable.strings */; };
+		ADF95DBC15C6CFFA00E5A3EE /* mongodb-pane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBB15C6CFFA00E5A3EE /* mongodb-pane.tiff */; };
+		ADF95DC015C6D76A00E5A3EE /* instance_started.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */; };
+		ADF95DC115C6D76A00E5A3EE /* instance_stopped.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */; };
+		ADF95DC215C6D76A00E5A3EE /* logo-mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBF15C6D76A00E5A3EE /* logo-mongodb.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +50,6 @@
 		AD822B4F15B9ADD300FB0B55 /* MongoDB-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MongoDB-Prefix.pch"; sourceTree = "<group>"; };
 		AD822B5015B9ADD300FB0B55 /* MongoDBPrefsPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongoDBPrefsPane.h; sourceTree = "<group>"; };
 		AD822B5615B9ADD300FB0B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MongoDBPrefsPane.xib; sourceTree = "<group>"; };
-		AD822B5715B9ADD300FB0B55 /* instance_started.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instance_started.png; sourceTree = "<group>"; };
-		AD822B5815B9ADD300FB0B55 /* instance_stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instance_stopped.png; sourceTree = "<group>"; };
-		AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-mongodb.png"; sourceTree = "<group>"; };
-		AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mongodb.tiff; sourceTree = "<group>"; };
 		AD945F8415BC417B000A74FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADAF3CB915BA9569008C79F0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		ADAF3CBA15BA9569008C79F0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
@@ -71,6 +67,10 @@
 		ADC4D29415C194E200CEB84A /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/pt.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
 		ADC4D29515C194F200CEB84A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
 		ADC4D29615C194F200CEB84A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/MongoDBPrefsPane.xib"; sourceTree = "<absolute>"; };
+		ADF95DBB15C6CFFA00E5A3EE /* mongodb-pane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "mongodb-pane.tiff"; sourceTree = "<group>"; };
+		ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_started.tiff; sourceTree = "<group>"; };
+		ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_stopped.tiff; sourceTree = "<group>"; };
+		ADF95DBF15C6D76A00E5A3EE /* logo-mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "logo-mongodb.tiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,12 +169,12 @@
 		AD822B5215B9ADD300FB0B55 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */,
+				ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */,
+				ADF95DBF15C6D76A00E5A3EE /* logo-mongodb.tiff */,
+				ADF95DBB15C6CFFA00E5A3EE /* mongodb-pane.tiff */,
 				AD945F8315BC417B000A74FF /* Localizable.strings */,
 				AD822B5515B9ADD300FB0B55 /* MongoDBPrefsPane.xib */,
-				AD822B5715B9ADD300FB0B55 /* instance_started.png */,
-				AD822B5815B9ADD300FB0B55 /* instance_stopped.png */,
-				AD822B5915B9ADD300FB0B55 /* logo-mongodb.png */,
-				AD822B5A15B9ADD300FB0B55 /* mongodb.tiff */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -253,10 +253,10 @@
 			files = (
 				ADC955FA15BC4D4600E8D3FA /* Localizable.strings in Resources */,
 				AD822B6015B9ADD300FB0B55 /* MongoDBPrefsPane.xib in Resources */,
-				AD822B6115B9ADD300FB0B55 /* instance_started.png in Resources */,
-				AD822B6215B9ADD300FB0B55 /* instance_stopped.png in Resources */,
-				AD822B6315B9ADD300FB0B55 /* logo-mongodb.png in Resources */,
-				AD822B6415B9ADD300FB0B55 /* mongodb.tiff in Resources */,
+				ADF95DBC15C6CFFA00E5A3EE /* mongodb-pane.tiff in Resources */,
+				ADF95DC015C6D76A00E5A3EE /* instance_started.tiff in Resources */,
+				ADF95DC115C6D76A00E5A3EE /* instance_stopped.tiff in Resources */,
+				ADF95DC215C6D76A00E5A3EE /* logo-mongodb.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
