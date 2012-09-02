@@ -27,6 +27,7 @@ Localization
 * Simplified Chinese
 * Spanish
 * Brazilian / Portugese
+* Italian
 
 Prerequisites
 -------------
