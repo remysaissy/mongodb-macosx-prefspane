@@ -65,7 +65,9 @@
 + (NSString *)_findBinaryNamed:(NSString *)processName
 {
     NSString *binaryFullPath = nil;
-    NSString *path = [[[[[NSProcessInfo processInfo] environment] objectForKey:@"PATH"] retain] autorelease];
+//[[[NSProcessInfo processInfo] environment] objectForKey:@"PATH"] does not return the user PATH and I don't want to rely on such configuratio either.
+//    Therefore, here is the list of standard paths.
+    NSString *path = @"/bin:/usr/bin:/usr/local/bin:/opt/bin:/opt/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/opt/sbin:/opt/local/sbin";
     NSArray *searchPath = [path componentsSeparatedByString:@":"];
     for (NSString *filePath in searchPath) {
         binaryFullPath = [filePath stringByAppendingPathComponent:processName];
