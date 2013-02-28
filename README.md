@@ -32,8 +32,7 @@ Localization
 Prerequisites
 -------------
 
-It does not embed a MongoDB Server. Therefore, you first have to install MongoDB.
-A simple way to do it is by using Homebrew to install MongoDB.
+It does not embed a MongoDB Server. Therefore, you first have to install MongoDB with HomeBrew.
 
 $brew install mongodb
 
