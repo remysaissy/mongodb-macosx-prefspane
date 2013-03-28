@@ -17,7 +17,7 @@ static NSString * const loggingFile = @"~/Library/Logs/mongodb-prefspane.log";
     va_list ap;
     va_start(ap, format);
     NSString *logMessage = [NSString stringWithFormat:@"[INFO]%@:%@::%@", NSStringFromClass(class), NSStringFromSelector(selector), 
-                            [[[NSString alloc] initWithFormat:format arguments:ap] autorelease]];
+                            [[NSString alloc] initWithFormat:format arguments:ap]];
     va_end(ap);
     NSLog(@"%@", logMessage);
 }
@@ -27,7 +27,7 @@ static NSString * const loggingFile = @"~/Library/Logs/mongodb-prefspane.log";
     va_list ap;
     va_start(ap, format);
     NSString *logMessage = [NSString stringWithFormat:@"[ERROR]%@:%@::%@", NSStringFromClass(class), NSStringFromSelector(selector), 
-                            [[[NSString alloc] initWithFormat:format arguments:ap] autorelease]];
+                            [[NSString alloc] initWithFormat:format arguments:ap]];
     va_end(ap);
     NSLog(@"%@", logMessage);
 }

@@ -7,7 +7,8 @@
 //
 
 #import "AutoUpdater.h"
-#import "Helpers+Private.h"
+#import "ServiceControl.h"
+#import "UnixProcessesHelper.h"
 
 enum AutoUpdateSteps 
 {
@@ -19,7 +20,7 @@ enum AutoUpdateSteps
 @interface AutoUpdater()
 
 //The data received from the network connection.
-@property (retain, nonatomic) NSMutableData *_data;
+@property (strong, nonatomic) NSMutableData *_data;
 
 //The update step.
 @property (assign, nonatomic) enum AutoUpdateSteps _updateStep;
@@ -35,6 +36,7 @@ enum AutoUpdateSteps
 @implementation AutoUpdater
 
 @synthesize hasUpdated;
+@synthesize delegate;
 
 @synthesize _data;
 @synthesize _updateStep;
@@ -62,10 +64,10 @@ enum AutoUpdateSteps
     if (self._updateStep != AutoUpdateStepIdle)
         return;
     self.hasUpdated = NO;
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/LATEST_VERSION"] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:6];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self.delegate checkLatestVersionURLForAutoUpdater:self] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:6];
     self._updateStep = AutoUpdateStepCheckLatest;
     self._data = nil;
-    NSURLConnection *connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES] autorelease];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
     [connection start];
 }
 
@@ -107,24 +109,24 @@ enum AutoUpdateSteps
 
 - (void)_checkingUpdateDidFinish
 {
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    [f setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]]; 
+    [f setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]]; 
     
-    NSString *versionString = [[[[[NSBundle bundleForClass:[AutoUpdater class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"] retain] autorelease];
+    NSString *versionString = [[[NSBundle bundleForClass:[AutoUpdater class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSNumber *versionNumber = [f numberFromString:versionString];
     
-    NSString *latestVersionString = [[[NSString alloc] initWithData:self._data encoding:NSUTF8StringEncoding] autorelease];
+    NSString *latestVersionString = [[NSString alloc] initWithData:self._data encoding:NSUTF8StringEncoding];
     latestVersionString = [latestVersionString stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\t\n "]];
     NSNumber *latestVersionNumber = [f numberFromString:latestVersionString];
-    self._updateStep = AutoUpdateStepIdle;    
+    self._updateStep = AutoUpdateStepIdle;
     self._data = nil;
     
     if ([versionNumber floatValue] < [latestVersionNumber floatValue]) {
         [NSString logInfoFromClass:[self class] withSelector:_cmd withFormat:@"A new version (%@) has been found. Downloading...", latestVersionNumber];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/download/MongoDB.prefPane.zip"]];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self.delegate downloadLatestVersionURLForAutoUpdater:self]];
         self._updateStep = AutoUpdateStepDownloadLatest;
-        NSURLConnection *connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES] autorelease];
+        NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
         [connection start];        
     }    
 }
@@ -134,16 +136,17 @@ enum AutoUpdateSteps
     [NSString logInfoFromClass:[self class] withSelector:_cmd withFormat:@"Installing new version..."];
     NSString *prefsPaneBinary = [[NSBundle bundleForClass:[self class]] bundlePath];
     NSString *prefsPanePath = [prefsPaneBinary stringByDeletingLastPathComponent];
-    NSString *updatedBinaryZipped = [NSTemporaryDirectory() stringByAppendingPathComponent:@"MongoDB.prefPane.zip"];
+        NSString *bundleName = [[[NSBundle bundleForClass:[AutoUpdater class]] infoDictionary] objectForKey:@"CFBundleName"];
+    NSString *updatedBinaryZipped = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.prefPane.zip", bundleName]];
     NSString *updatedBinaryPath = [updatedBinaryZipped stringByDeletingLastPathComponent];    
     NSString *updatedBinary = [updatedBinaryZipped stringByDeletingPathExtension];
     [self._data writeToFile:updatedBinaryZipped atomically:YES];
     self._updateStep = AutoUpdateStepIdle;    
     self._data = nil;
-    NSTask *task = [NSTask launchedTaskWithLaunchPath:[Helpers _findBinaryNamed:@"unzip"] arguments:[NSArray arrayWithObjects:@"-o", updatedBinaryZipped, @"-d", updatedBinaryPath, nil]];
+    NSTask *task = [NSTask launchedTaskWithLaunchPath:[UnixProcessesHelper findBinaryNamed:@"unzip"] arguments:[NSArray arrayWithObjects:@"-o", updatedBinaryZipped, @"-d", updatedBinaryPath, nil]];
     [task waitUntilExit];
     if (!task.terminationStatus) {
-        NSString *cpTool = [Helpers _findBinaryNamed:@"cp"];
+        NSString *cpTool = [UnixProcessesHelper findBinaryNamed:@"cp"];
         task = [NSTask launchedTaskWithLaunchPath:cpTool arguments:[NSArray arrayWithObjects:@"-vfR", updatedBinary, prefsPanePath, nil]];
         [task waitUntilExit];
         if (task.terminationStatus) {
