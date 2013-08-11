@@ -4,5 +4,13 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-    #import "NSString+Log.h"
+
+//Logging.
+
+#define INFO(fmt, ...) NSLog(@"INFO %@:%d:%@ %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
+__LINE__, NSStringFromSelector(_cmd), [NSString stringWithFormat:(fmt), ##__VA_ARGS__])
+
+#define ERROR(fmt, ...) NSLog(@"ERROR %@:%d:%@ %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
+__LINE__, NSStringFromSelector(_cmd), [NSString stringWithFormat:(fmt), ##__VA_ARGS__])
+
 #endif
