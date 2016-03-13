@@ -3,7 +3,7 @@
 //  mongodb
 //
 //  Created by Rémy SAISSY on 20/07/12.
-//  Copyleft LGPL 2013.
+//  Copyleft LGPL.
 //
 
 #import <PreferencePanes/PreferencePanes.h>

@@ -25,7 +25,7 @@
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyleft 2012 GPL Rémy SAISSY</string>
+	<string>Copyleft LGPL Rémy SAISSY</string>
 	<key>NSMainNibFile</key>
 	<string>MongoDBPrefsPane</string>
 	<key>NSPrefPaneIconFile</key>
