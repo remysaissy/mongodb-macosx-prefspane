@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B174F94200D680E00519EAD /* MongoDB_Logo_RGB_FullColor_NoReg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B174F93200D680E00519EAD /* MongoDB_Logo_RGB_FullColor_NoReg.png */; };
+		5B174F96200D683A00519EAD /* MongoDB_Logo_RGB_FullColor_190.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B174F95200D683A00519EAD /* MongoDB_Logo_RGB_FullColor_190.png */; };
 		AD7142A415BE728000FF90F5 /* AutoUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7142A215BE728000FF90F5 /* AutoUpdater.h */; };
 		AD7142A515BE728000FF90F5 /* AutoUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7142A315BE728000FF90F5 /* AutoUpdater.m */; };
 		AD7142B415BECCA900FF90F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7142B315BECCA900FF90F5 /* Security.framework */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B174F93200D680E00519EAD /* MongoDB_Logo_RGB_FullColor_NoReg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MongoDB_Logo_RGB_FullColor_NoReg.png; sourceTree = "<group>"; };
+		5B174F95200D683A00519EAD /* MongoDB_Logo_RGB_FullColor_190.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MongoDB_Logo_RGB_FullColor_190.png; sourceTree = "<group>"; };
 		AD07946E15F37E85000A0399 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD07946F15F37E85000A0399 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MongoDBPrefsPane.xib; sourceTree = "<group>"; };
 		AD7142A215BE728000FF90F5 /* AutoUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUpdater.h; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		AD822B5215B9ADD300FB0B55 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B174F95200D683A00519EAD /* MongoDB_Logo_RGB_FullColor_190.png */,
+				5B174F93200D680E00519EAD /* MongoDB_Logo_RGB_FullColor_NoReg.png */,
 				ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */,
 				ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */,
 				ADF95DBF15C6D76A00E5A3EE /* logo-mongodb.tiff */,
@@ -248,6 +254,8 @@
 			files = (
 				ADC955FA15BC4D4600E8D3FA /* Localizable.strings in Resources */,
 				AD822B6015B9ADD300FB0B55 /* MongoDBPrefsPane.xib in Resources */,
+				5B174F94200D680E00519EAD /* MongoDB_Logo_RGB_FullColor_NoReg.png in Resources */,
+				5B174F96200D683A00519EAD /* MongoDB_Logo_RGB_FullColor_190.png in Resources */,
 				ADF95DBC15C6CFFA00E5A3EE /* mongodb-pane.tiff in Resources */,
 				ADF95DC015C6D76A00E5A3EE /* instance_started.tiff in Resources */,
 				ADF95DC115C6D76A00E5A3EE /* instance_stopped.tiff in Resources */,
